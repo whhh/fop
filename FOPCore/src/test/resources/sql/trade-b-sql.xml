@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd 
+   http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="test.com.mbs.manage.busi.dao.TXBDao" > 
+
+   <update id="updateB" parameterType="java.util.HashMap">
+  <![CDATA[
+    UPDATE TEST_XYG_B SET RMFLAG = #{rmflagb} WHERE RMID =#{rmidb}
+    ]]>  
+  </update>
+  <select id="queryB" parameterType="java.lang.String" resultType="java.lang.String">  
+   <![CDATA[
+    SELECT RMFLAG FROM TEST_XYG_B WHERE RMID = #{rmidb}
+    ]]>  
+  </select> 
+</mapper>

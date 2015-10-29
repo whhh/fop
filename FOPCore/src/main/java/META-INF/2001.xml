@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SDOROOT id="2001"	desc="发送短信" >
+	<FmtDefine dataName="send2001" fieldName = "SEND100001">
+
+		<FmtGroup dataName = "system" fieldName = "SYS_HEAD">
+			<FmtField dataName="serviceCode" fieldName="SERVICE_CODE" />
+			<FmtField dataName="consumerId" fieldName="CONSUMER_ID" />		
+
+	
+			<FmtField dataName="serviceScene" fieldName="SERVICE_SCENE" />
+			<FmtField dataName="seqNo" fieldName="CONSUMER_SEQ_NO" />
+			<FmtField dataName="tranDate" fieldName="TRAN_DATE" />			
+			<FmtField dataName="retStatus" fieldName="RET_STATUS" />		
+
+	
+			<FmtField dataName="timeStamp" fieldName="TRAN_TIMESTAMP" />		
+
+		
+		</FmtGroup>
+		
+		<FmtGroup dataName = "app" fieldName = "APP_HEAD">
+			<FmtField dataName="userId" fieldName="USER_ID" />
+			<FmtField dataName="branchId" fieldName="BRANCH_ID" />			
+
+		
+		</FmtGroup>
+		
+		<FmtGroup dataName = "body" fieldName = "BODY">
+			<FmtField dataName="flag" fieldName="FLAG" />
+			<FmtField dataName="verify" fieldName="VERIFY_TYPE" />			
+			<FmtField dataName="channelCode" fieldName="CHANNEL_CODE" />
+			<FmtField dataName="mobile" fieldName="MOBILE" />
+			<FmtField dataName="msg" fieldName="MSG" />			
+			<FmtField dataName="verifyValue" fieldName="VERIFY_VALUE" />
+			<FmtField dataName="verifyValue1" fieldName="VERIFY_VALUE1" />
+		</FmtGroup>
+	</FmtDefine>
+	
+	
+		<FmtDefine dataName="receive2001" fieldName = "RECEIVE">
+
+		<FmtGroup dataName = "system" fieldName = "SYS_HEAD">
+			<FmtField dataName="serviceCode" fieldName="SERVICE_CODE" />
+			<FmtRepeat dataName="ret" fieldName="RET">
+				<FmtField dataName="retCode" fieldName="RET_CODE" />
+				<FmtField dataName="retMsg" fieldName="RET_MSG" />
+			</FmtRepeat>
+
+			<FmtField dataName="consumerId" fieldName="CONSUMER_ID" />
+			<FmtField dataName="retStatus" fieldName="RET_STATUS" />
+			<FmtField dataName="serviceCode" fieldName="SERVICE_CODE" />		
+
+	
+			<FmtField dataName="timeStamp" fieldName="TRAN_TIMESTAMP" />	
+			<FmtField dataName="serviceScene" fieldName="SERVICE_SCENE" />
+			<FmtField dataName="seqNo" fieldName="ESB_SEQ_NO" />			
+		</FmtGroup>
+		<FmtGroup dataName = "body" fieldName = "BODY">
+			<FmtField dataName="flag" fieldName="FLAG" />
+			<FmtField dataName="verify" fieldName="VERIFY_TYPE" />			
+			<FmtField dataName="channelCode" fieldName="CHANNEL_CODE" />
+			<FmtField dataName="mobile" fieldName="MOBILE" />
+			<FmtField dataName="msg" fieldName="MSG" />			
+			<FmtField dataName="verifyValue" fieldName="VERIFY_VALUE" />
+		</FmtGroup>
+	</FmtDefine>
+</SDOROOT>	
