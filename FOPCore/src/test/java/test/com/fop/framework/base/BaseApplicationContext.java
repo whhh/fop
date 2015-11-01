@@ -21,6 +21,8 @@ public class BaseApplicationContext {
   /**
    * 获取ApplicationContext操作
    * @return
+   *
+   *
    */
   public static ApplicationContext getApplicationContext(){
     ApplicationContext accontext = new ClassPathXmlApplicationContext("test-application-context.xml");
